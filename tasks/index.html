@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Demo for gamification project.">
+        <meta name="keywords" content="gamification, concentration, students, self-development">
+        <meta name="author" content="Azimkhanov Bauyrzhan">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="robots" content="index, follow">
+
+        <link rel="icon" href="../data/images/favicon.png" type="image/x-icon">
+
+        <title>Gamification for Concentration</title>
+        
+        <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <div id="login-overlay">
+            <h2 id="login-overlay-heading">Please enter your ID to proceed</h2>
+            <label for="user-id" id="login-overlay-user-id-label">User ID:</label>
+            <input type="text" name="user-id" id="login-overlay-user-id-input" title="User ID" placeholder="12MD0345" autocomplete="on">
+            <button id="login-overlay-user-id-submit-button">Submit</button>
+        </div>
+        <div id="achievements-overlay">
+            <div id="achievements-overlay-main-container">
+                <!-- <div id="achievement-container-0" class="achievement-container bronze">
+                    <div id="achievement-text-container-0" class="achievement-text-container">
+                        <div id="achievement-name-0" class="achievement-name">Progressive machine!</div>
+                        <div id="achievement-description-0" class="achievement-description">Reach a consistent improvement in session difficulty over 5 consecutive sessions without missing days.</div>
+                    </div>   
+                    <img id="achievement-image-0" class="achievement-image" src="../data/images/billy.jpg">
+                </div>
+                <div id="achievement-container-1" class="achievement-container silver">
+                    <div id="achievement-text-container-1" class="achievement-text-container">
+                        <div id="achievement-name-1" class="achievement-name">Progressive machine!</div>
+                        <div id="achievement-description-1" class="achievement-description">Reach a consistent improvement in session difficulty over 5 consecutive sessions without missing days.</div>
+                    </div>   
+                    <img id="achievement-image-1" class="achievement-image" src="../data/images/billy.jpg">
+                </div>
+                <div id="achievement-container-2" class="achievement-container gold">
+                    <div id="achievement-text-container-2" class="achievement-text-container">
+                        <div id="achievement-name-2" class="achievement-name">Progressive machine!</div>
+                        <div id="achievement-description-2" class="achievement-description">Reach a consistent improvement in session difficulty over 5 consecutive sessions without missing days.</div>
+                    </div>   
+                    <img id="achievement-image-2" class="achievement-image" src="../data/images/billy.jpg">
+                </div>
+                <div id="achievement-container-3" class="achievement-container platinum">
+                    <div id="achievement-text-container-3" class="achievement-text-container">
+                        <div id="achievement-name-3" class="achievement-name">Progressive machine!</div>
+                        <div id="achievement-description-3" class="achievement-description">Reach a consistent improvement in session difficulty over 5 consecutive sessions without missing days.</div>
+                    </div>   
+                    <img id="achievement-image-3" class="achievement-image" src="../data/images/billy.jpg">
+                </div> -->
+            </div>
+        </div>
+        <div id="tasks-page-main-container">
+            <h3 id="tasks-page-heading">Tasks</h3>
+            <div id="tasks-page-tasks-list-container">
+                <!-- <div id="tasks-container-1" class="tasks-container">
+                    <div id="tasks-container-text-1" class="tasks-container-text">1. First-order differential equations.</div>
+                    <input type="checkbox" id="tasks-container-checkbox-1" class="tasks-container-checkbox" name="1" value="1">
+                </div>
+                <div id="tasks-container-2" class="tasks-container">
+                    <div id="tasks-container-text-2" class="tasks-container-text">2. First-order differential equations.</div>
+                    <input type="checkbox" id="tasks-container-checkbox-2" class="tasks-container-checkbox" name="2" value="2">
+                </div>
+                <div id="tasks-container-3" class="tasks-container">
+                    <div id="tasks-container-text-3" class="tasks-container-text">3. First-order differential equations.</div>
+                    <input type="checkbox" id="tasks-container-checkbox-3" class="tasks-container-checkbox" name="3" value="3">
+                </div>
+                <div id="tasks-container-4" class="tasks-container">
+                    <div id="tasks-container-text-4" class="tasks-container-text">4. First-order differential equations.</div>
+                    <input type="checkbox" id="tasks-container-checkbox-4" class="tasks-container-checkbox" name="4" value="4">
+                </div>
+                <div id="tasks-container-5" class="tasks-container">
+                    <div id="tasks-container-text-5" class="tasks-container-text">5. First-order differential equations.</div>
+                    <input type="checkbox" id="tasks-container-checkbox-5" class="tasks-container-checkbox" name="5" value="5">
+                </div>
+                <div id="tasks-container-6" class="tasks-container">
+                    <div id="tasks-container-text-6" class="tasks-container-text">6. First-order differential equations.</div>
+                    <input type="checkbox" id="tasks-container-checkbox-6" class="tasks-container-checkbox" name="6" value="1">
+                </div>
+                <div id="tasks-container-7" class="tasks-container">
+                    <div id="tasks-container-text-7" class="tasks-container-text">7. First-order differential equations.</div>
+                    <input type="checkbox" id="tasks-container-checkbox-7" class="tasks-container-checkbox" name="7" value="7">
+                </div>
+                <div id="tasks-container-8" class="tasks-container">
+                    <div id="tasks-container-text-8" class="tasks-container-text">8. First-order differential equations.</div>
+                    <input type="checkbox" id="tasks-container-checkbox-8" class="tasks-container-checkbox" name="8" value="8">
+                </div>
+                <div id="tasks-container-9" class="tasks-container">
+                    <div id="tasks-container-text-9" class="tasks-container-text">9. First-order differential equations.</div>
+                    <input type="checkbox" id="tasks-container-checkbox-9" class="tasks-container-checkbox" name="9" value="9">
+                </div> -->
+            </div>
+            <button id="tasks-page-go-to-main-page-button">Back to main page</button>
+            <div id="tasks-page-progress-container">
+                <div id="tasks-page-progress-header">Overall progress:</div>
+                <div id="tasks-page-progress-text">13.37%</div>
+            </div>
+        </div>
+    </body>
+    <script type="module" src="../data/scripts/achievements_checkinkg_scripts.js"></script>
+    <script type="module" language="JavaScript" src="scripts.js"></script>
+</html> 

@@ -1,0 +1,281 @@
+html, body
+{
+    margin: 0;
+    height: 100%;
+    font-family: Arial, Verdana, Helvetica;
+}
+#tasks-page-main-container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+#tasks-page-heading
+{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 15%;
+    font-size: 1.6rem;
+}
+#tasks-page-tasks-list-container
+{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    gap: 0.3rem;
+    align-items: center;
+    flex-basis: 57.5%;
+    width: 100%;
+    overflow: auto;
+}
+.tasks-container
+{
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 1%;
+    width: 75%;
+    min-height: 10%;
+    align-items: center;
+}
+.tasks-container-text
+{
+    font-size: 1.6rem;
+    width: 4%;
+}
+.tasks-container-input
+{
+    font-size: 1.6rem;
+    width: 80%;
+}
+.tasks-container-checkbox
+{
+    margin: 0;
+    padding: 0;
+    width: 3%;
+    height: 75%;
+}
+.tasks-container-remove-task-button
+{
+    width: 3.4%;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tasks-container-add-new-task-button
+{
+    width: 3.4%;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+}
+#tasks-save-button
+{
+    font-size: 1.4rem;
+}
+#tasks-page-go-to-main-page-button
+{
+    flex-basis: 7.5%;
+    font-size: 1.4rem;
+}
+#tasks-page-progress-container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    flex-basis: 20%;
+    width: 100%;
+}
+#tasks-page-progress-header
+{
+    font-size: 1.7rem;
+}
+#tasks-page-progress-text
+{
+    font-size: 2rem;
+    font-weight: bold;
+}
+#achievements-overlay
+{
+    pointer-events: none;
+    position: fixed; 
+    top: 0; 
+    right: 0;
+    width: 35%;
+    height: 85%;
+    z-index: 1001;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;   
+}
+#achievements-overlay-main-container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    gap: 0.2rem;
+}
+.achievement-container
+{
+    width: 98%;
+    min-height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(255, 255, 255, 1);
+}
+.achievement-text-container
+{
+    flex-basis: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+}
+.achievement-name
+{
+    flex-basis: 45%;
+    font-size: 1.2rem;
+}
+.achievement-description
+{
+    flex-basis: 40%;
+}
+.achievement-image
+{
+    flex-basis: 12%;
+    max-width: 12%;
+}
+.achievement-container.bronze
+{
+    border: #CD7F32 solid 0.15rem;
+    box-shadow: 0rem 0rem 1rem 0.1rem #CD7F32;
+}
+.achievement-container.silver
+{
+    border: #818181 solid 0.15rem;
+    box-shadow: 0rem 0rem 1rem 0.1rem #5c5c5c;
+}
+.achievement-container.gold
+{
+    border: #D4AF37 solid 0.15rem;
+    box-shadow: 0rem 0rem 1rem 0.1rem #D4AF37;
+}
+.achievement-container.platinum
+{
+    border: #00c3ff solid 0.15rem;
+    box-shadow: 0rem 0rem 1rem 0.1rem #00c3ff;
+}
+.achievement-icon 
+{
+    height: 2rem;
+    width: 2rem;
+    transform: rotate(45deg);
+}
+
+.achievement-icon.bronze 
+{
+    background-color: #CD7F32;
+}
+
+.achievement-icon.silver 
+{
+    background-color: #818181;
+}
+
+.achievement-icon.gold 
+{
+    background-color: #D4AF37;
+}
+
+.achievement-icon.platinum 
+{
+    background-color: #00c3ff;
+}
+#login-overlay 
+{
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1003;
+    background: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+}
+#login-overlay-user-id-container
+{
+    display: flex;
+    flex-direction: row;
+}
+
+@media only screen and (orientation: portrait)
+{
+    #achievements-overlay
+    {
+        width: 45%;
+    }
+    .achievement-name
+    {
+        font-size: 0.9rem;
+    }
+    .achievement-description
+    {
+        font-size: 0.8rem;
+    }
+    #tasks-page-tasks-list-container
+    {
+        flex-basis: 70%;
+    }
+    .tasks-container
+    {
+        width: 95%;
+    }
+    .tasks-container-input
+    {
+        font-size: 1.2rem;
+        width: 65%;
+        height: 80%;
+    }
+    .tasks-container-checkbox
+    {
+        width: 12%;
+        height: 80%;
+    }
+    .tasks-container-remove-task-button
+    {
+        width: 10%;
+        font-size: 1.3rem;
+    }
+    .tasks-container-add-new-task-button
+    {
+        width: 10%;
+        font-size: 1.3rem;
+    }
+    #tasks-page-progress-container
+    {
+        flex-basis: 15%;
+    }
+}

@@ -1,0 +1,123 @@
+html, body
+{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Verdana, Helvetica;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(187, 187, 187);
+}
+#settings-page-main-container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+    background-color: white;
+}
+#settings-page-heading
+{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 10%;
+    font-size: 1.6rem;
+}
+#settings-page-load-file-container
+{
+    flex-basis: 27.5%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.5rem;
+    border-top: 0.2rem solid rgb(187, 187, 187);
+}
+#load-file-input
+{
+    font-size: 1rem;
+    margin-left: 8%;
+}
+#load-file-button
+{
+    font-size: 1rem;
+}
+#settings-page-download-file-container
+{
+    width: 100%;
+    font-size: 1.5rem;
+    flex-basis: 27.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-top: 0.2rem solid rgb(187, 187, 187);
+}
+#download-file-button
+{
+    font-size: 1rem;
+}
+#settings-page-factory-reset-container
+{
+    width: 100%;
+    font-size: 1.5rem;
+    flex-basis: 27.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-top: 0.2rem solid rgb(187, 187, 187);
+    border-bottom: 0.2rem solid rgb(187, 187, 187);
+}
+#factory-reset-button
+{
+    font-size: 1rem;
+}
+#settings-page-go-to-main-page-button
+{
+    flex-basis: 7.5%;
+    font-size: 1.4rem;
+}
+#login-overlay 
+{
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1003;
+    background: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+}
+#login-overlay-user-id-container
+{
+    display: flex;
+    flex-direction: row;
+}
+
+@media only screen and (orientation: portrait)
+{
+    #settings-page-main-container
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        width: 85%;
+        background-color: white;
+    }
+}

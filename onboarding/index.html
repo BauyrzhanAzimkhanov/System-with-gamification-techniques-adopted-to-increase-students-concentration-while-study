@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Demo for gamification project.">
+        <meta name="keywords" content="gamification, concentration, students, self-development">
+        <meta name="author" content="Azimkhanov Bauyrzhan">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="robots" content="index, follow">
+
+        <link rel="icon" href="../data/images/favicon.png" type="image/x-icon">
+
+        <title>Gamification for Concentration</title>
+        
+        <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <div id="onboarding-overlay">
+            <div id="onboarding-overlay-upper-hints-container">
+                <div id="upper-hints-achivements-container" class="hints-text-container">Click here to see achivements</div>
+                <div id="upper-hints-progress-container" class="hints-text-container">Click here to see progress</div>
+                <div id="upper-hints-settings-container" class="hints-text-container">Click here to change settings</div>
+            </div>
+            <div id="onboarding-overlay-lower-hints-container">
+                <div id="lower-hints-streak-day-container" class="hints-text-container">Click to see details about day</div>
+                <div id="lower-hints-timer-container" class="hints-text-container">click here to start/stop/pause timer</div>
+            </div>
+        </div>
+        <div id="main-page-main-container">
+            <div id="main-page-upper-links-container">
+                <a id="main-page-achivements-link" class="main-page-upper-links">Achivements</a>
+                <a id="main-page-progress-link" class="main-page-upper-links">Progress</a>
+                <a id="main-page-settings-link" class="main-page-upper-links">Settings</a>
+            </div>
+            <div id="main-page-timer-and-button-container">
+                <div id="main-page-timer-text">00:00</div>
+                <button id="main-page-timer-button" class="button"></button>
+            </div>
+            <div id="main-page-streaks-and-days-container">
+                <div id="main-page-streak-counter-container">
+                    <div id="main-page-streak-counter-header">Current streak:</div>
+                    <div id="main-page-streak-counter-text">0 days</div>
+                </div>
+                <div id="main-page-streak-days-container">
+                    <div id="main-page-streak-day-first" class="streak-day-container">
+                        <div id="streak-day-first-date" class="streak-day-date">-</div>
+                        <div id="streak-day-first-session-duration" class="streak-day-session-duration">-s</div>
+                    </div>
+                    <div id="main-page-streak-day-second" class="streak-day-container">
+                        <div id="streak-day-second-date" class="streak-day-date">-</div>
+                        <div id="streak-day-second-session-duration" class="streak-day-session-duration">-s</div>
+                    </div>
+                    <div id="main-page-streak-day-third" class="streak-day-container">
+                        <div id="streak-day-third-date" class="streak-day-date">-</div>
+                        <div id="streak-day-third-session-duration" class="streak-day-session-duration">-s</div>
+                    </div>
+                    <div id="main-page-streak-day-fourth" class="streak-day-container">
+                        <div id="streak-day-fourth-date" class="streak-day-date">-</div>
+                        <div id="streak-day-fourth-session-duration" class="streak-day-session-duration">-s</div>
+                    </div>
+                    <div id="main-page-streak-day-fifth" class="streak-day-container">
+                        <div id="streak-day-fifth-date" class="streak-day-date">-</div>
+                        <div id="streak-day-fifth-session-duration" class="streak-day-session-duration">-s</div>
+                    </div>
+                    <div id="main-page-streak-day-sixth" class="streak-day-container">
+                        <div id="streak-day-sixth-date" class="streak-day-date">-</div>
+                        <div id="streak-day-sixth-session-duration" class="streak-day-session-duration">-s</div>
+                    </div>
+                    <div id="main-page-streak-day-seventh" class="streak-day-container">
+                        <div id="streak-day-seventh-date" class="streak-day-date">-</div>
+                        <div id="streak-day-seventh-session-duration" class="streak-day-session-duration">-s</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="leader-line.min.js"></script>
+    <script language="JavaScript" src="scripts.js"></script>
+</html> 
+

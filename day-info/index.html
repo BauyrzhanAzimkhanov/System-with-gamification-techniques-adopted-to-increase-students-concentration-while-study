@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Demo for gamification project.">
+        <meta name="keywords" content="gamification, concentration, students, self-development">
+        <meta name="author" content="Azimkhanov Bauyrzhan">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="robots" content="index, follow">
+
+        <link rel="icon" href="../data/images/favicon.png" type="image/x-icon">
+
+        <title>Gamification for Concentration</title>
+        
+        <script
+			src="https://code.jquery.com/jquery-3.7.1.min.js"
+			integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+			crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/mathjs@14.2.0/lib/browser/math.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <div id="login-overlay">
+            <h2 id="login-overlay-heading">Please enter your ID to proceed</h2>
+            <label for="user-id" id="login-overlay-user-id-label">User ID:</label>
+            <input type="text" name="user-id" id="login-overlay-user-id-input" title="User ID" placeholder="12MD0345" autocomplete="on">
+            <button id="login-overlay-user-id-submit-button">Submit</button>
+        </div>
+        <div id="achievements-overlay">
+            <div id="achievements-overlay-main-container">
+                <!-- <div id="achievement-container-0" class="achievement-container bronze">
+                    <div id="achievement-text-container-0" class="achievement-text-container">
+                        <div id="achievement-name-0" class="achievement-name">Progressive machine!</div>
+                        <div id="achievement-description-0" class="achievement-description">Reach a consistent improvement in session difficulty over 5 consecutive sessions without missing days.</div>
+                    </div>   
+                    <img id="achievement-image-0" class="achievement-image" src="../data/images/billy.jpg">
+                </div>
+                <div id="achievement-container-1" class="achievement-container silver">
+                    <div id="achievement-text-container-1" class="achievement-text-container">
+                        <div id="achievement-name-1" class="achievement-name">Progressive machine!</div>
+                        <div id="achievement-description-1" class="achievement-description">Reach a consistent improvement in session difficulty over 5 consecutive sessions without missing days.</div>
+                    </div>   
+                    <img id="achievement-image-1" class="achievement-image" src="../data/images/billy.jpg">
+                </div>
+                <div id="achievement-container-2" class="achievement-container gold">
+                    <div id="achievement-text-container-2" class="achievement-text-container">
+                        <div id="achievement-name-2" class="achievement-name">Progressive machine!</div>
+                        <div id="achievement-description-2" class="achievement-description">Reach a consistent improvement in session difficulty over 5 consecutive sessions without missing days.</div>
+                    </div>   
+                    <img id="achievement-image-2" class="achievement-image" src="../data/images/billy.jpg">
+                </div>
+                <div id="achievement-container-3" class="achievement-container platinum">
+                    <div id="achievement-text-container-3" class="achievement-text-container">
+                        <div id="achievement-name-3" class="achievement-name">Progressive machine!</div>
+                        <div id="achievement-description-3" class="achievement-description">Reach a consistent improvement in session difficulty over 5 consecutive sessions without missing days.</div>
+                    </div>   
+                    <img id="achievement-image-3" class="achievement-image" src="../data/images/billy.jpg">
+                </div> -->
+            </div>
+        </div>
+        <div id="day-info-page-main-container">
+            <h3 id="day-info-page-heading">Day info</h3>
+            <div id="day-info-feedback-and-graph-container">
+                <div id="day-info-feedback-and-date-container">
+                    <div id="day-info-date">13.03.2024 - 1h 33m 7s</div>
+                    <div id="day-info-feedback-container">
+                        <div id="day-info-feedback-data-container" class="day-info-feedback-category">
+                            <div id="day-info-feedback-left-container" class="day-info-feedback-data-sub-container">
+                                <div id="day-info-feedback-intensity">Average intensity: 4/10</div>
+                                <div id="day-info-feedback-engagement">Average engagement: 8.5/10</div>
+                                <div id="day-info-feedback-difficulty">Average difficulty: 4/10</div>
+                            </div>
+                            <div id="day-info-feedback-right-container" class="day-info-feedback-data-sub-container">
+                                <div id="day-info-feedback-daily-goal">Duration goal: 0s</div>
+                                <div id="day-info-feedback-distractions">Distractions: 0</div>
+                                <div id="day-info-feedback-pauses">Pauses: 0</div>
+                            </div>
+                        </div>
+                        <div id="day-info-feedback-topic" class="day-info-feedback-category">Covered topics: first order equations</div>
+                        <div id="day-info-feedback-overall" class="day-info-feedback-category">Overall experience: It was very interesting.</div>
+                    </div>
+                </div>
+                <div id="day-info-graph-container"></div>
+            </div>
+            <div id="day-info-cumulative-summary">Today you worked better than 21.37% of all previous records!</div>
+            <button id="day-info-page-go-to-main-page-button">Back to main page</button>
+            <div id="day-info-streak-and-progress-container">
+                <div id="day-info-streak-container" class="day-info-streak-and-progress">
+                    <div id="day-info-streak-heading" class="day-info-streak-and-progress-heading">Current streak:</div>
+                    <div id="day-info-streak-text" class="day-info-streak-and-progress-text">2 days</div>
+                </div>
+                <div id="day-info-progress-container" class="day-info-streak-and-progress">
+                    <div id="day-info-progress-heading" class="day-info-streak-and-progress-heading">Overall progress:</div>
+                    <div id="day-info-progress-text" class="day-info-streak-and-progress-text">11.111%</div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script language="JavaScript" src="scripts.js"></script>
+</html> 

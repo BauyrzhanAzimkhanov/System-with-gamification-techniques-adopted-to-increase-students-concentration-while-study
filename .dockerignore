@@ -1,0 +1,9 @@
+*.md
+connect.sh
+clear_data.sh
+ssl_certs_initiation_script.sh
+prepare_for_start.sh
+start.sh
+stop.sh
+Dockerfile*
+todo

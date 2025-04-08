@@ -1,0 +1,206 @@
+html, body 
+{
+    margin: 0;
+    height: 100%;
+    font-family: Arial, Verdana, Helvetica;
+}
+#main-page-main-container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px;
+    text-align: center;
+    height: 100%;
+}
+#main-page-upper-links-container
+{
+    margin-top: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+}
+.main-page-upper-links
+{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+#main-page-achivements-link
+{
+    text-align: left;
+    flex-basis: 10.3%;
+}
+#main-page-progress-link
+{
+    text-align: center;
+    flex-basis: 10.3%;
+}
+#main-page-settings-link
+{
+    text-align: right;
+    flex-basis: 10.3%;
+}
+#main-page-timer-and-button-container
+{
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20%;
+}
+#main-page-timer-text
+{
+    font-size: 6rem;
+}
+.button 
+{
+    margin-left: 1rem;
+    border: 0;
+    background: transparent;
+    box-sizing: border-box;
+    width: 0;
+    height: 74px;
+  
+    border-color: transparent transparent transparent #202020;
+    transition: 100ms all ease;
+    cursor: pointer;
+  
+    border-style: solid;
+    border-width: 37px 0 37px 60px;
+
+    &.paused 
+    {
+        border-style: double;
+        border-width: 0px 0 0px 60px;
+    }
+
+    &:hover 
+    {
+        border-color: transparent transparent transparent #404040;
+    }
+}
+#main-page-streaks-and-days-container
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 98%;
+    justify-content: space-between;
+    flex-basis: 25%;
+}
+#main-page-streak-counter-header
+{
+    font-size: 1.7rem;
+}
+#main-page-streak-counter-text
+{
+    font-weight: bolder;
+    font-size: 2.3rem;
+}
+#main-page-streak-counter-container
+{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    gap: 0.1rem;
+}
+#main-page-streak-days-container
+{
+    display: flex;
+    flex-direction: row;
+    flex-basis: 50%;
+    justify-content: space-between;
+}
+.streak-day-container
+{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 13%;
+    background-color: rgb(121, 121, 121);
+    font-weight: lighter;
+}
+.streak-day-date
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 35%;
+    font-size: 1.5rem;
+}
+.streak-day-session-duration
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 65%;
+    font-size: 1.5rem;
+}
+#onboarding-overlay 
+{ 
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(128, 128, 128, 0.5);
+    z-index: 1000;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    
+}
+.hints-text-container
+{
+    font-style: italic;
+    font-size: 1rem;
+    font-size: 1.2rem;
+}
+#onboarding-overlay-upper-hints-container
+{
+    display: flex;
+    margin-top: 0%;
+    flex-basis: 20%;
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-between;
+    width: 85%;
+}
+#upper-hints-achivements-container
+{
+    text-align: left;
+    flex-basis: 20.3%;
+}
+#upper-hints-progress-container
+{
+    text-align: center;
+    flex-basis: 20.3%;
+}
+#upper-hints-settings-container
+{
+    text-align: right;
+    flex-basis: 20.3%;
+}
+#onboarding-overlay-lower-hints-container
+{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    width: 85%;
+    flex-basis: 50%;
+}
+#lower-hints-streak-day-container
+{
+    text-align: left;
+    flex-basis: 20.3%;
+}
+#lower-hints-timer-container
+{
+    text-align: right;
+    flex-basis: 20.3%;
+}

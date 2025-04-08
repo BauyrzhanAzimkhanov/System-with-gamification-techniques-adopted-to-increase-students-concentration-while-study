@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Demo for gamification project.">
+        <meta name="keywords" content="gamification, concentration, students, self-development">
+        <meta name="author" content="Azimkhanov Bauyrzhan">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="robots" content="index, follow">
+
+        <link rel="icon" href="../data/images/favicon.png" type="image/x-icon">
+
+        <title>Gamification for Concentration</title>
+        
+        <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <div id="login-overlay">
+            <h2 id="login-overlay-heading">Please enter your ID to proceed</h2>
+            <label for="user-id" id="login-overlay-user-id-label">User ID:</label>
+            <input type="text" name="user-id" id="login-overlay-user-id-input" title="User ID" placeholder="12MD0345" autocomplete="on">
+            <button id="login-overlay-user-id-submit-button">Submit</button>
+        </div>
+        <div id="settings-page-main-container">
+            <h3 id="settings-page-heading">Settings</h3>
+            <div id="settings-page-load-file-container">Load save:
+                <input id="load-file-input" type="file" name="filename"/>
+                <button id="load-file-button">Confirm</button>
+            </div>
+            <div id="settings-page-download-file-container">Download save:
+                <button id="download-file-button">Download</button>
+            </div>
+            <div id="settings-page-factory-reset-container">Factory reset:
+                <button id="factory-reset-button">Reset everything</button>
+            </div>
+            <button id="settings-page-go-to-main-page-button">Back to main page</button>
+        </div>
+    </body>
+<script language="JavaScript" src="scripts.js"></script>
+</html> 

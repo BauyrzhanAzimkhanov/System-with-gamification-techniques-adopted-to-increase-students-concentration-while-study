@@ -1,0 +1,95 @@
+{
+    "achievements": [
+        {
+            "name": "In the beginning was the Word...",
+            "description": "Complete your very first study session.",
+            "rarity": "bronze",
+            "status": "unfinished",
+            "finish_time": null
+        },
+        {
+            "name": "Hasta la Vista, Laziness!",
+            "description": "Achieve a streak of 2 consecutive study sessions without missing a day.",
+            "rarity": "bronze",
+            "status": "unfinished",
+            "finish_time": null
+        },
+        {
+            "name": "Concentration Commando!",
+            "description": "Finish 5 consecutive study sessions with no distractions.",
+            "rarity": "bronze",
+            "status": "unfinished",
+            "finish_time": null
+        },
+        {
+            "name": "Mission: Fifteen",
+            "description": "Achieve your daily study goals for 15 sessions.",
+            "rarity": "silver",
+            "status": "unfinished",
+            "finish_time": null
+        },
+        {
+            "name": "Mission: Thirty",
+            "description": "Achieve your daily study goals for 30 sessions.",
+            "rarity": "gold",
+            "status": "unfinished",
+            "finish_time": null
+        },
+        {
+            "name": "Laser Focus",
+            "description": "Keep the total number of distractions and pauses below 3 per session.",
+            "rarity": "bronze",
+            "status": "unfinished",
+            "finish_time": null
+        },
+        {
+            "name": "No Breaks, No Mercy!",
+            "description": "Achieve your daily study goal without any breaks and pauses at the end of the session.",
+            "rarity": "bronze",
+            "status": "unfinished",
+            "finish_time": null
+        },
+        {
+            "name": "Go Long or Go Home!",
+            "description": "Complete a session lasting more than 3 hours with no distractions and at most 2 pauses.",
+            "rarity": "silver",
+            "status": "unfinished",
+            "finish_time": null
+        },
+        {
+            "name": "If your dreams do not scare you, they are not big enough.",
+            "description": "Begin a study session with a daily goal exceeding 4 hours.",
+            "rarity": "silver",
+            "status": "unfinished",
+            "finish_time": null
+        },
+        {
+            "name": "Lock and Load!",
+            "description": "Create your first study task.",
+            "rarity": "bronze",
+            "status": "unfinished",
+            "finish_time": null
+        },
+        {
+            "name": "Task Annihilator!",
+            "description": "Complete all tasks.",
+            "rarity": "bronze",
+            "status": "unfinished",
+            "finish_time": null
+        },
+        {
+            "name": "Jack of All Trades",
+            "description": "Cover at least 3 different topics during one session.",
+            "rarity": "silver",
+            "status": "unfinished",
+            "finish_time": null
+        },
+        {
+            "name": "Achievement Unlocked!",
+            "description": "Unlock all achievements.",
+            "rarity": "platinum",
+            "status": "hidden",
+            "finish_time": null
+        }
+    ]
+}

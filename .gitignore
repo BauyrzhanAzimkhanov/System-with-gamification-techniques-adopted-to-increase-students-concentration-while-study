@@ -1,0 +1,5 @@
+data/achievements_*
+data/sessions_*
+data/tasks_*
+logs/nginx/*
+data/[0-9]*

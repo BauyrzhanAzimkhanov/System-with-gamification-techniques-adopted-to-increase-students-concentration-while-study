@@ -1,0 +1,11 @@
+{
+    "settings": {
+        "allowed_urls": [
+            "wikipedia",
+            "stackoverflow",
+            "kbtu"
+        ],
+        "daily_goal": 1400,
+        "is_dark_theme_enabled": false
+    }
+}

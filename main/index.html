@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Demo for gamification project.">
+        <meta name="keywords" content="gamification, concentration, students, self-development">
+        <meta name="author" content="Azimkhanov Bauyrzhan">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="robots" content="index, follow">
+
+        <link rel="icon" href="../data/images/favicon.png" type="image/x-icon">
+
+        <title>Gamification for Concentration</title>
+        
+        <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+        <script type="text/javascript" src="./progressbar.js"></script>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <div id="login-overlay">
+            <h2 id="login-overlay-heading">Please enter your ID to proceed</h2>
+            <label for="user-id" id="login-overlay-user-id-label">User ID:</label>
+            <input type="text" name="user-id" id="login-overlay-user-id-input" title="User ID" placeholder="12MD0345" autocomplete="on">
+            <button id="login-overlay-user-id-submit-button">Submit</button>
+        </div>
+        <div id="onboarding-overlay">
+            <div id="onboarding-overlay-upper-hints-container">
+                <div id="upper-hints-achievements-container" class="hints-text-container">Click here to see achievements</div>
+                <div id="upper-hints-tasks-container" class="hints-text-container">Click here to see tasks</div>
+                <div id="upper-hints-settings-container" class="hints-text-container">Click here to change settings</div>
+            </div>
+            <div id="onboarding-overlay-lower-hints-container">
+                <div id="lower-hints-streak-day-container" class="hints-text-container">Click to see details about day</div>
+                <div id="lower-hints-timer-container" class="hints-text-container">click here to start/stop/pause timer</div>
+            </div>
+        </div>
+        <div id="achievements-overlay">
+            <div id="achievements-overlay-main-container">
+                <!-- <div id="achievement-container-0" class="achievement-container bronze">
+                    <div id="achievement-text-container-0" class="achievement-text-container">
+                        <div id="achievement-name-0" class="achievement-name">Progressive machine!</div>
+                        <div id="achievement-description-0" class="achievement-description">Reach a consistent improvement in session difficulty over 5 consecutive sessions without missing days.</div>
+                    </div>   
+                    <img id="achievement-image-0" class="achievement-image" src="../data/images/billy.jpg">
+                </div>
+                <div id="achievement-container-1" class="achievement-container silver">
+                    <div id="achievement-text-container-1" class="achievement-text-container">
+                        <div id="achievement-name-1" class="achievement-name">Progressive machine!</div>
+                        <div id="achievement-description-1" class="achievement-description">Reach a consistent improvement in session difficulty over 5 consecutive sessions without missing days.</div>
+                    </div>   
+                    <img id="achievement-image-1" class="achievement-image" src="../data/images/billy.jpg">
+                </div>
+                <div id="achievement-container-2" class="achievement-container gold">
+                    <div id="achievement-text-container-2" class="achievement-text-container">
+                        <div id="achievement-name-2" class="achievement-name">Progressive machine!</div>
+                        <div id="achievement-description-2" class="achievement-description">Reach a consistent improvement in session difficulty over 5 consecutive sessions without missing days.</div>
+                    </div>   
+                    <img id="achievement-image-2" class="achievement-image" src="../data/images/billy.jpg">
+                </div>
+                <div id="achievement-container-3" class="achievement-container platinum">
+                    <div id="achievement-text-container-3" class="achievement-text-container">
+                        <div id="achievement-name-3" class="achievement-name">Progressive machine!</div>
+                        <div id="achievement-description-3" class="achievement-description">Reach a consistent improvement in session difficulty over 5 consecutive sessions without missing days.</div>
+                    </div>   
+                    <img id="achievement-image-3" class="achievement-image" src="../data/images/billy.jpg">
+                </div> -->
+            </div>
+        </div>
+        <div id="submit-session-overlay">
+            <span id="submit-session-overlay-cross"></span>
+            <div id="submit-session-overlay-field">
+                <h3 id="submit-session-overlay-field-heading" class="submit-session-overlay-field-item">Feedback</h3>
+                <div id="submit-session-overlay-field-date-and-duartion-container" class="submit-session-overlay-field-item">
+                    <div id="submit-session-overlay-field-date">Date: 2025-01-03</div>
+                    <div id="submit-session-overlay-field-duration">Session duration: 1h. 12m. 5s.</div>
+                </div>
+                <div id="submit-session-overlay-field-pauses" class="submit-session-overlay-field-item">Pauses: 2</div>
+                <div id="submit-session-overlay-field-distractions" class="submit-session-overlay-field-item">Distractions: 3</div>
+                <div id="submit-session-overlay-field-intensity-container" class="submit-session-overlay-field-item">
+                    <label for="intensity" id="submit-session-overlay-field-intensity-label">Intensity:</label>
+                    <input type="number" name="intensity" min="0" max="10" value="0" step="0.1" id="submit-session-overlay-field-intensity-input">
+                </div>
+                <div id="submit-session-overlay-field-engagement-container" class="submit-session-overlay-field-item">
+                    <label for="engagement" id="submit-session-overlay-field-engagement-label">Engagement:</label>
+                    <input type="number" name="engagement" min="0" max="10" value="0" step="0.1" id="submit-session-overlay-field-engagement-input">
+                </div>
+                <div id="submit-session-overlay-field-difficulty-container" class="submit-session-overlay-field-item">
+                    <label for="difficulty" id="submit-session-overlay-field-difficulty-label">Difficulty:</label>
+                    <input type="number" name="difficulty" min="0" max="10" value="0" step="0.1" id="submit-session-overlay-field-difficulty-input">
+                </div>
+                <div id="submit-session-overlay-field-covered-topics-container" class="submit-session-overlay-field-item">Covered topics:
+                    <div id="submit-session-overlay-field-covered-topics-item-container">
+                        <!-- <div id="submit-session-overlay-field-covered-topics-item-0" class="submit-session-overlay-field-covered-topics-item">
+                            <label for="covered-topic-0" id="submit-session-overlay-field-covered-topics-label-0" class="submit-session-overlay-field-covered-topics-label">First-order differential equations</label>
+                            <input type="checkbox" name="covered-topic-0" id="submit-session-overlay-field-covered-topics-input-0" class="submit-session-overlay-field-covered-topics-input">
+                        </div>
+                        <div id="submit-session-overlay-field-covered-topics-item-1" class="submit-session-overlay-field-covered-topics-item">
+                            <label for="covered-topic-1" id="submit-session-overlay-field-covered-topics-label-1" class="submit-session-overlay-field-covered-topics-label">First-order differential equations</label>
+                            <input type="checkbox" name="covered-topic-1" id="submit-session-overlay-field-covered-topics-input-1" class="submit-session-overlay-field-covered-topics-input">
+                        </div>
+                        <div id="submit-session-overlay-field-covered-topics-item-2" class="submit-session-overlay-field-covered-topics-item">
+                            <label for="covered-topic-2" id="submit-session-overlay-field-covered-topics-label-2" class="submit-session-overlay-field-covered-topics-label">First-order differential equations</label>
+                            <input type="checkbox" name="covered-topic-2" id="submit-session-overlay-field-covered-topics-input-2" class="submit-session-overlay-field-covered-topics-input">
+                        </div>
+                        <div id="submit-session-overlay-field-covered-topics-item-3" class="submit-session-overlay-field-covered-topics-item">
+                            <label for="covered-topic-3" id="submit-session-overlay-field-covered-topics-label-3" class="submit-session-overlay-field-covered-topics-label">First-order differential equations</label>
+                            <input type="checkbox" name="covered-topic-3" id="submit-session-overlay-field-covered-topics-input-3" class="submit-session-overlay-field-covered-topics-input">
+                        </div>
+                        <div id="submit-session-overlay-field-covered-topics-item-4" class="submit-session-overlay-field-covered-topics-item">
+                            <label for="covered-topic-4" id="submit-session-overlay-field-covered-topics-label-4" class="submit-session-overlay-field-covered-topics-label">First-order differential equations</label>
+                            <input type="checkbox" name="covered-topic-4" id="submit-session-overlay-field-covered-topics-input-4" class="submit-session-overlay-field-covered-topics-input">
+                        </div>
+                        <div id="submit-session-overlay-field-covered-topics-item-5" class="submit-session-overlay-field-covered-topics-item">
+                            <label for="covered-topic-5" id="submit-session-overlay-field-covered-topics-label-5" class="submit-session-overlay-field-covered-topics-label">First-order differential equations</label>
+                            <input type="checkbox" name="covered-topic-5" id="submit-session-overlay-field-covered-topics-input-5" class="submit-session-overlay-field-covered-topics-input">
+                        </div> -->
+                    </div>
+                </div>
+                <div id="submit-session-overlay-field-text-feedback-container" class="submit-session-overlay-field-item">
+                    <label for="text-feedback" id="submit-session-overlay-field-text-feedback-label">Text feedback:</label>
+                    <textarea name="text-feedback" id="submit-session-overlay-field-text-feedback-textarea"></textarea>
+                </div>
+                <button id="submit-session-overlay-save-button" class="submit-session-overlay-field-item">Save</button>
+            </div>
+        </div>
+        <div id="main-page-main-container">
+            <div id="main-page-upper-links-container">
+                <a id="main-page-achievements-link" class="main-page-upper-links" href="../achievements/index.html">Achievements</a>
+                <a id="main-page-tasks-link" class="main-page-upper-links" href="../tasks/index.html">Tasks</a>
+                <a id="main-page-settings-link" class="main-page-upper-links" href="../settings/index.html">Settings</a>
+            </div>
+            <div id="main-page-timer-and-button-container">
+                <div id="main-page-timer-and-button-progress-bar"></div>
+                <div id="main-page-timer-text">00:00</div>
+                <button id="main-page-timer-button" class="button"></button>
+                <div id="main-page-timer-finish-session-container">
+                    <div id="main-page-timer-finish-session">Finish session</div>
+                </div>
+                <div id="main-page-timer-daily-goal-container">Daily goal:
+                    <div id="main-page-timer-daily-goal-inputs-container">
+                        <input type="number" min="0" max="23" value="0" id="main-page-timer-daily-goal-input-hours" class="main-page-timer-daily-goal-inputs">
+                        <p id="main-page-timer-daily-goal-input-hours-minutes-delimeter">:</p>
+                        <input type="number" min="0" max="59" value="0" id="main-page-timer-daily-goal-input-minutes" class="main-page-timer-daily-goal-inputs">
+                        <p id="main-page-timer-daily-goal-input-minutes-seconds-delimeter">:</p>
+                        <input type="number" min="0" max="59" value="1" id="main-page-timer-daily-goal-input-seconds" class="main-page-timer-daily-goal-inputs">
+                    </div>
+                </div>
+            </div>
+            <div id="main-page-streaks-and-days-container">
+                <div id="main-page-streak-counter-container">
+                    <div id="main-page-streak-counter-header">Current streak:</div>
+                    <div id="main-page-streak-counter-text">0 days</div>
+                </div>
+                <div id="main-page-streak-days-container">
+                    <!-- <div id="streak-day-container-1" class="streak-day-container">
+                        <div id="streak-day-date-1" class="streak-day-date">-</div>
+                        <div id="streak-day-session-duration-1" class="streak-day-session-duration">-s</div>
+                    </div>
+                    <div id="streak-day-container-2" class="streak-day-container">
+                        <div id="streak-day-date-2" class="streak-day-date">-</div>
+                        <div id="streak-day-session-duration-2" class="streak-day-session-duration">-s</div>
+                    </div>
+                    <div id="streak-day-container-3" class="streak-day-container">
+                        <div id="streak-day-date-3" class="streak-day-date">-</div>
+                        <div id="streak-day-session-duration-3" class="streak-day-session-duration">-s</div>
+                    </div>
+                    <div id="streak-day-container-4" class="streak-day-container">
+                        <div id="streak-day-date-4" class="streak-day-date">-</div>
+                        <div id="streak-day-session-duration-4" class="streak-day-session-duration">-s</div>
+                    </div>
+                    <div id="streak-day-container-5" class="streak-day-container">
+                        <div id="streak-day-date-5" class="streak-day-date">-</div>
+                        <div id="streak-day-session-duration-5" class="streak-day-session-duration">-s</div>
+                    </div>
+                    <div id="streak-day-container-6" class="streak-day-container">
+                        <div id="streak-day-date-6" class="streak-day-date">-</div>
+                        <div id="streak-day-session-duration-6" class="streak-day-session-duration">-s</div>
+                    </div>
+                    <div id="streak-day-container-7" class="streak-day-container">
+                        <div id="streak-day-date-7" class="streak-day-date">-</div>
+                        <div id="streak-day-session-duration-7" class="streak-day-session-duration">-s</div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="leader-line.min.js"></script>
+    <script type="module" src="../data/scripts/achievements_checkinkg_scripts.js"></script>
+    <script type="module" language="JavaScript" src="scripts.js"></script>
+</html> 
+
